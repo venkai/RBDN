@@ -1,0 +1,57 @@
+## General
+
+# Editor temporaries
+*.swp
+*~
+
+# Sublime Text settings
+*.sublime-workspace
+*.sublime-project
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+## Caffe
+caffe
+caffe_rbdn
+caffe_colorization
+resources
+training_log
+testing_log
+snapshot
+
+# Data and models
+data
+Data
+models
+results
+*.caffemodel
+*.caffemodel.h5
+*.solverstate
+*.solverstate.h5
+*.binaryproto
+*leveldb
+*lmdb
+
+## Miscellaneous
+
+# Compiled python
+*.pyc
+
+# Compiled MATLAB
+*.mex*
+
+# Archives
+*.tar
+*.tar.*
+*.tgz
+*.zip
+*.rar
+*.7z
+

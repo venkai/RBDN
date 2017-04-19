@@ -1,0 +1,15 @@
+net: "./train.prototxt"
+base_lr: 3.16e-3
+lr_policy: "step"
+gamma: 0.316
+stepsize: 45000
+display: 10
+max_iter: 184000
+momentum: 0.9
+momentum2: 0.99
+weight_decay: 0.001
+snapshot: 1000
+snapshot_prefix: "./snapshot/trn"
+solver_mode: GPU
+solver_type: ADAM
+average_loss: 1000
