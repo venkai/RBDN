@@ -8,14 +8,8 @@
 # ---------------------- Fetch caffe for RBDN --------------------------------
 # (caffe folders will not be tracked by git)
 echo "fetch caffe for RBDN"
-mkdir -p caffe_rbdn && cd caffe_rbdn
-git clone -b rbdn --single-branch https://github.com/venkai/caffe.git
+git clone -b rec_conv --single-branch https://github.com/venkai/caffe.git
 # You should compile this caffe library with your own Makefile.config file)
-cd ..
-mkdir -p caffe_colorization && cd caffe_colorization
-git clone -b colorization --single-branch https://github.com/venkai/caffe.git
-# You should compile this caffe library with your own Makefile.config file)
-cd ..
 
 
 ##############################################################################
@@ -50,12 +44,9 @@ do
   rm -rf ${F}training_log && mkdir -p ${F}training_log
 done
 
-rm -f ./inference/caffe && ln -sf ../caffe_rbdn/caffe ./inference/caffe
-rm -f ./training/caffe && ln -sf ../caffe_rbdn/caffe ./training/caffe
-rm -f ./training/caffe_colorization && \
-ln -sf ../caffe_colorization/caffe ./training/caffe_colorization
-rm -f ./inference/caffe_colorization && \
-ln -sf ../caffe_colorization/caffe ./inference/caffe_colorization
+rm -f ./inference/caffe && ln -sf ../caffe ./inference/caffe
+rm -f ./training/caffe && ln -sf ../caffe ./training/caffe
 
 rm -f ./inference/Data && ln -sf ../data/inference ./inference/Data
 rm -f ./training/Data && ln -sf ../data/training ./training/Data
+

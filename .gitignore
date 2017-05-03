@@ -55,3 +55,8 @@ results
 *.rar
 *.7z
 
+# Debug directories
+# these are marked as *_debug and will not be tracked by git
+# _debug will be removed from dirname once these are ready
+*_debug
+
